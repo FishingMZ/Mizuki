@@ -277,6 +277,28 @@ const defaultPostListLayout = siteConfig.postListLayout?.defaultMode || "list";
 		.right-sidebar-container #right-sidebar {
 			height: fit-content;
 		}
+		
+
+		/* ==================== 新增毛玻璃效果 ==================== */
+		
+		/* 1. 针对左侧边栏、右侧边栏以及主内容区域 */
+		:global(#sidebar), 
+		:global(#right-sidebar), 
+		:global(#swup-container > div) {
+			/* 确保背景有一定透明度，否则毛玻璃模糊效果看不出来 */
+			background-color: rgba(255, 255, 255, 0.65) !important; 
+			/* 核心：支持现代浏览器的毛玻璃效果 */
+			backdrop-filter: blur(12px) !important;
+			/* 兼容旧版 Safari */
+			-webkit-backdrop-filter: blur(12px) !important; 
+		}
+
+		/* 2. 如果网页开启了暗黑模式 (Dark Mode)，需要调整暗色下的背景色 */
+		:global(html.dark #sidebar), 
+		:global(html.dark #right-sidebar), 
+		:global(html.dark #swup-container > div) {
+			background-color: rgba(30, 30, 30, 0.65) !important;
+		}
 	</style>
 
 	<!-- 侧边栏TOC模式 -->
