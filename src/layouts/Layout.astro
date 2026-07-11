@@ -4,6 +4,7 @@ import { PageProgressBar } from "@components/control/PageProgressBar";
 import Pio from "@components/features/pio/Pio.astro";
 import ConfigCarrier from "@components/misc/ConfigCarrier.astro";
 import MusicPlayer from "@components/widgets/music-player/MusicPlayer.svelte";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import { pioConfig, profileConfig, siteConfig } from "@/config";
 
 const BANNER_HEIGHT = 35;
@@ -183,6 +184,9 @@ const bannerOffset =
 			setOGTypeArticle={setOGTypeArticle}
 			configHue={configHue}
 		/>
+
+		<!-- Vercel Speed Insights -->
+		<SpeedInsights />
 
 		<!-- defines global css variables. This will be applied to <html> <body> and some other elements idk why -->
 		<slot name="head" />
