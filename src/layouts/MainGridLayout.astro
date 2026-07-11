@@ -277,6 +277,17 @@ const defaultPostListLayout = siteConfig.postListLayout?.defaultMode || "list";
 		.right-sidebar-container #right-sidebar {
 			height: fit-content;
 		}
+		/* Mizuki / Fuwari 主题中，所有独立卡片方块的通用底层类名都是 .card-base */
+		:global(.card-base) {
+			background-color: rgba(255, 255, 255, 0.65) !important;
+			backdrop-filter: blur(12px) !important;
+			-webkit-backdrop-filter: blur(12px) !important;
+		}
+
+		/* 暗黑模式 (Dark Mode) 适配 */
+		:global(html.dark .card-base) {
+			background-color: rgba(30, 30, 30, 0.65) !important;
+		}
 	</style>
 
 	<!-- 侧边栏TOC模式 -->
