@@ -5,7 +5,7 @@ pinned: false
 description: 今天顺手发了个视频感觉良好而来写一篇
 tags: [Video, Blogging]
 category: Notes
-draft: false
+draft: true
 ---
 
 # 软件
