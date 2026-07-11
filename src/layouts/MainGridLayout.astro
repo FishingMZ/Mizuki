@@ -277,34 +277,21 @@ const defaultPostListLayout = siteConfig.postListLayout?.defaultMode || "list";
 		.right-sidebar-container #right-sidebar {
 			height: fit-content;
 		}
-
-		/* ==================== 针对 Mizuki 主题的底层精准模糊 ==================== */
-
-		/* 1. 深度拦截：针对所有注入了透明卡片背景（如 bg-white/70, bg-neutral-900/70）的元素和特定卡片 */
-		:global([class*="bg-white/"]), 
-		:global([class*="bg-neutral-900/"]),
-		:global(.card-base),
-		:global(#toc-container) {
-			/* 核心：毛玻璃效果 */
-			backdrop-filter: blur(12px) !important;
-			-webkit-backdrop-filter: blur(12px) !important;
+		.sidebar-container {
+			align-self: start;
+			display: contents;
 		}
 
-		/* 2. 修正背景色（可选微调）：为了让毛玻璃质感更高级、更通透，微调其不饱和度 */
-		:global(html:not(.dark) [class*="bg-white/"]) {
-			background-color: rgba(255, 255, 255, 0.65) !important;
+		.sidebar-container #right-sidebar {
+			height: fit-content;
 		}
-		:global(html.dark [class*="bg-neutral-900/"]) {
-			background-color: rgba(26, 26, 26, 0.65) !important;
+		.main-content-container {
+			align-self: start;
+			display: contents;
 		}
 
-		/* 3. 规避幽灵长条：绝对禁止外层大包装容器产生毛玻璃效果（干掉之前多出来的那一泡） */
-		:global(#sidebar), 
-		:global(#right-sidebar), 
-		:global(#toc-wrapper), 
-		:global(#toc-inner-wrapper) {
-			backdrop-filter: none !important;
-			-webkit-backdrop-filter: none !important;
+		.main-content-container #right-sidebar {
+			height: fit-content;
 		}
 	</style>
 
