@@ -5,7 +5,7 @@ pinned: false
 description: 当我试图在侏罗纪时代的笔记本上安装Nyarch Linux时，be like：
 tags: [linux, blogging, technology]
 category: Notes
-draft: false
+draft: true
 ---
 
 # 所用材料
