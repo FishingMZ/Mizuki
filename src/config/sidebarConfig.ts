@@ -101,7 +101,14 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 	components: {
 		left: ["profile", "announcement", "tags", "card-toc"],
 		right: ["site-stats", "calendar", "categories", "music-sidebar"],
-		drawer: ["profile", "announcement","site-stats", "music-sidebar", "categories", "tags"],
+		drawer: [
+			"profile",
+			"announcement",
+			"site-stats",
+			"music-sidebar",
+			"categories",
+			"tags",
+		],
 	},
 
 	// 默认动画配置
