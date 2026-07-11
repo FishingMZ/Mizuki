@@ -5,7 +5,7 @@ pinned: false
 description: 详细说一说深色模式的bug
 tags: [Mizuki, Bugs]
 category: Notes
-draft: false
+draft: true
 ---
 
 # 已知触发条件
