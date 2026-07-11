@@ -277,28 +277,6 @@ const defaultPostListLayout = siteConfig.postListLayout?.defaultMode || "list";
 		.right-sidebar-container #right-sidebar {
 			height: fit-content;
 		}
-		
-
-		/* ==================== 修复后的精细化毛玻璃 ==================== */
-		
-		/* 1. 针对左侧、右侧边栏内部的各个具体卡片，以及中间的文章卡片 */
-		:global(#sidebar .card-content), 
-		:global(#right-sidebar .card-content), 
-		:global(#swup-container .post-card),
-		:global(#swup-container > div > div) { 
-			/* 确保卡片本身是半透明的 */
-			background-color: rgba(255, 255, 255, 0.65) !important;
-			backdrop-filter: blur(12px) !important;
-			-webkit-backdrop-filter: blur(12px) !important;
-		}
-
-		/* 2. 暗黑模式适配 */
-		:global(html.dark #sidebar .card-content), 
-		:global(html.dark #right-sidebar .card-content), 
-		:global(html.dark #swup-container .post-card),
-		:global(html.dark #swup-container > div > div) {
-			background-color: rgba(30, 30, 30, 0.65) !important;
-		}
 	</style>
 
 	<!-- 侧边栏TOC模式 -->
