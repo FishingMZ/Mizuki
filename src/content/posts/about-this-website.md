@@ -5,7 +5,7 @@ pinned: false
 description: 从零开始，搭建一个Mizuki博客，我都干啥了？
 tags: [Mizuki, Blogging]
 category: Notes
-draft: false
+draft: true
 ---
 
 # 起因
