@@ -277,6 +277,23 @@ const defaultPostListLayout = siteConfig.postListLayout?.defaultMode || "list";
 		.right-sidebar-container #right-sidebar {
 			height: fit-content;
 		}
+		/* ==================== 终极精准毛玻璃 ==================== */
+		
+		/* 核心：只抓取真正具有独立卡片形态的 class */
+		:global(.card-content),
+		:global(.post-card),
+		:global(#toc-inner-wrapper) {
+			background-color: rgba(255, 255, 255, 0.65) !important;
+			backdrop-filter: blur(12px) !important;
+			-webkit-backdrop-filter: blur(12px) !important;
+		}
+
+		/* 暗黑模式 */
+		:global(html.dark .card-content),
+		:global(html.dark .post-card),
+		:global(html.dark #toc-inner-wrapper) {
+			background-color: rgba(30, 30, 30, 0.65) !important;
+		}
 	</style>
 
 	<!-- 侧边栏TOC模式 -->
