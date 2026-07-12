@@ -187,7 +187,7 @@ export const siteConfig: SiteConfig = {
 		desktopSidebar: true, // 电脑端右侧边栏 TOC
 		floating: true, // 悬浮 TOC 按钮
 		depth: 2, // 目录深度，1-6，1 表示只显示 h1 标题，2 表示显示 h1 和 h2 标题，依此类推
-		useJapaneseBadge: true, // 使用日语假名标记（あいうえお...）代替数字，开启后会将 1、2、3... 改为 あ、い、う...
+		useJapaneseBadge: false, // 使用日语假名标记（あいうえお...）代替数字，开启后会将 1、2、3... 改为 あ、い、う...
 	},
 	showCoverInContent: true, // 在文章内容页显示文章封面
 	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
@@ -215,7 +215,7 @@ export const siteConfig: SiteConfig = {
 	// 卡片样式配置
 	card: {
 		border: true, // 开启卡片边框和微阴影，让卡片更有立体感
-		followTheme: false, // 卡片背景跟随主题色相
+		followTheme: true, // 卡片背景跟随主题色相
 	},
 	// 图片优化配置
 	imageOptimization: {
