@@ -26,14 +26,14 @@ export const profileConfig: ProfileConfig = {
 			url: "https://github.com/FishingMZ",
 		},
 		{
-			name: "Codeberg",
-			icon: "simple-icons:codeberg",
-			url: "https://codeberg.org",
-		},
-		{
 			name: "Discord",
 			icon: "fa7-brands:discord",
 			url: "https://discord.gg/dCGvnTtpHN",
+		},
+ 	{
+			name: "Telegram",
+			icon: "fa7-brands:telegram",
+			url: "https://t.me/fishingxxxx",
 		},
 	],
 };
