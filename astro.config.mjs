@@ -52,7 +52,7 @@ export default defineConfig({
 				variants: [
 					{
 						src: ["./src/assets/fonts/font.ttf"],
-						weight: "500",
+						weight: "600",
 						style: "normal",
 					},
 				],
@@ -71,7 +71,7 @@ export default defineConfig({
 				variants: [
 					{
 						src: ["./src/assets/fonts/font.ttf"],
-						weight: "400",
+						weight: "600",
 						style: "normal",
 					},
 				],
