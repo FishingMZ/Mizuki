@@ -37,32 +37,51 @@ import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 
 // https://astro.build/config
 export default defineConfig({
-  fonts: [
-    {
-      name: "JetBrains Mono", // 代码字体保留
-      cssVariable: "--font-jetbrains-mono",
-      provider: fontProviders.fontsource(),
-      styles: ["normal", "italic"],
-    },
-    {
-      name: "MyCustomFont", // 纯名称，不带括号
-      cssVariable: "--font-sans", // 直接覆盖全局无衬线字体变量
-      provider: fontProviders.local(),
-      options: {
-        variants: [
-          {
-            src: ["./src/assets/fonts/font.ttf"],
-            weight: "400", // 确认你的字体实际字重是多少
-            style: "normal",
-          },
-        ],
-      },
-      // 可以保留系统后备字体，以免加载失败时完全空白
-      fallbacks: ["system-ui", "sans-serif"],
-      optimizedFallbacks: true,
-    },
-    // 删除原来的 --font-body 和 --font-cjk 配置
-  ],
+	fonts: [
+		{
+			name: "JetBrains Mono",
+			cssVariable: "--font-jetbrains-mono",
+			provider: fontProviders.fontsource(),
+			styles: ["normal", "italic"],
+		},
+		{
+			name: "ZenMaruGothic-Medium",
+			cssVariable: "--font-body",
+			provider: fontProviders.local(),
+			options: {
+				variants: [
+					{
+						src: ["./src/assets/fonts/font.ttf"],
+						weight: "500",
+						style: "normal",
+					},
+				],
+			},
+			// These variables are composed into --font-sans below. Keep their
+			// fallback lists empty; otherwise a system fallback after this Latin
+			// font prevents the following CJK font from ever being considered.
+			fallbacks: [],
+			optimizedFallbacks: false,
+		},
+		{
+			name: "Loli",
+			cssVariable: "--font-cjk",
+			provider: fontProviders.local(),
+			options: {
+				variants: [
+					{
+						src: ["./src/assets/fonts/font.ttf"],
+						weight: "400",
+						style: "normal",
+					},
+				],
+			},
+			// The final system fallback belongs to --font-sans, not this partial
+			// CJK font stack.
+			fallbacks: [],
+			optimizedFallbacks: false,
+		},
+	],
 
 	site: siteConfig.siteURL,
 	base: "/",
