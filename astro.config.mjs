@@ -45,13 +45,13 @@ export default defineConfig({
 			styles: ["normal", "italic"],
 		},
 		{
-			name: "ZenMaruGothic-Medium",
+			name: "ZenMaruGothic-Medium(font.ttf)",
 			cssVariable: "--font-body",
 			provider: fontProviders.local(),
 			options: {
 				variants: [
 					{
-						src: ["./src/assets/fonts/ZenMaruGothic-Medium.ttf"],
+						src: ["./src/assets/fonts/font.ttf"],
 						weight: "500",
 						style: "normal",
 					},
@@ -64,13 +64,13 @@ export default defineConfig({
 			optimizedFallbacks: false,
 		},
 		{
-			name: "Loli",
+			name: "Loli(font.ttf)",
 			cssVariable: "--font-cjk",
 			provider: fontProviders.local(),
 			options: {
 				variants: [
 					{
-						src: ["./src/assets/fonts/loli.ttf"],
+						src: ["./src/assets/fonts/font.ttf"],
 						weight: "400",
 						style: "normal",
 					},
