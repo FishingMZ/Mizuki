@@ -725,6 +725,8 @@ html.is-page-transitioning #header-waves {
   .banner-text-overlay {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
   }
+（由于实际效果有bug故注释）
+   ========================================================================== */
 
   .banner-title {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
@@ -734,7 +736,6 @@ html.is-page-transitioning #header-waves {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
   }
 }
-   ========================================================================== */
 
 /* ==========================================================================
    水波纹显示优化
