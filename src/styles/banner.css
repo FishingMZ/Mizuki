@@ -19,16 +19,7 @@
   line-height: 1.2;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 /* ==========================================================================
    无 Banner 模式布局
