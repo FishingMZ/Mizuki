@@ -159,7 +159,7 @@ export const navBarConfig: NavBarConfig = {
 				},
 				{
 					name: "HomePage",
-					url: "http://fish.mts1.cn/",
+					url: "http://fish.0p.ink",
 					external: true,
 					icon: "material-symbols:home",
 				},
