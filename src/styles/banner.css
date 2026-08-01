@@ -19,7 +19,18 @@
   line-height: 1.2;
 }
 
-
+@keyframes overlayTitleIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
 
 /* ==========================================================================
    无 Banner 模式布局
@@ -708,6 +719,8 @@ html.is-page-transitioning #header-waves {
 /* ==========================================================================
    移动端暗色模式优化
    ========================================================================== */
+
+/* ==========================================================================
 @media (width < 1280px) and (prefers-color-scheme: dark) {
   .banner-text-overlay {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
@@ -721,6 +734,7 @@ html.is-page-transitioning #header-waves {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
   }
 }
+   ========================================================================== */
 
 /* ==========================================================================
    水波纹显示优化
